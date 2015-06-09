@@ -14,7 +14,7 @@ module.exports = {
     // Returns a promise that is resolved at the end of the tween.
     // Optionally takes a callback
     
-    tweenStateTo: function (stateObj, options, optionalCallback) {
+    setStateTween: function (stateObj, options, optionalCallback) {
         if (options) {
             assert(!options.endValue, "Do not specify end value with tweenStates");
         }

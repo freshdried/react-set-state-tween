@@ -1,6 +1,6 @@
 {
   "name": "react-set-state-tween",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Tweening drop-in replacement for React's setState",
   "main": "index.js",
   "scripts": {
