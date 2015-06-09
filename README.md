@@ -32,6 +32,11 @@ this.setState({
 
 
 
+## install
+```
+npm install --save react-set-state-tween
+npm install --save bluebird
+```
 
 ## Usage
 
