@@ -5,13 +5,15 @@ var Promise = require("bluebird");
 
 
 //A composable wrapper for react-tween-state a la promises
+//
 module.exports = {
     mixins: [tweenState.Mixin],
 
 
     // Takes a state object
-    // Returns a promise that is resolved at the end
+    // Returns a promise that is resolved at the end of the tween.
     // Optionally takes a callback
+    
     tweenStateTo: function (stateObj, options, optionalCallback) {
         if (options) {
             assert(!options.endValue, "Do not specify end value with tweenStates");
@@ -25,7 +27,7 @@ module.exports = {
                 // Short-circuit if not tweenable (aka not number)
                 if (typeof stateValue !== "number") return;
 
-                // Short circuit if vaules are the same;
+                // Short circuit if values are the same;
                 if (this.getTweeningValue(stateKey) === stateValue) return;
 
 
