@@ -1,6 +1,6 @@
 {
   "name": "react-set-state-tween",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Composable wrapper API for react-tween-state, à la Promises",
   "main": "index.js",
   "scripts": {

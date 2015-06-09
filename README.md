@@ -2,7 +2,7 @@
 
 </br>
 
-Composable wrapper API for [react-tween-state](https://github.com/chenglou/react-tween-state), à la [bluebird promises](https://github.com/petkaantonov/bluebird).
+Tweening drop-in replacement for React's `setState`, via [react-tween-state](https://github.com/chenglou/react-tween-state) and [bluebird promises](https://github.com/petkaantonov/bluebird).
 
 </br>
 
@@ -10,9 +10,11 @@ Composable wrapper API for [react-tween-state](https://github.com/chenglou/react
 
 `this.setStateTween` returns a [bluebird](https://github.com/petkaantonov/bluebird) promise that resolves at the end of the tween.
 
+This allows you to chain/parallelize multiple animations/actions as you would with any Promise with the [bluebird API](https://github.com/petkaantonov/bluebird/blob/master/API.md).
+
 </br>
 
-#### *tries to seamlessly replaces React's* `this.setState`
+#### *seamlessly replaces React's* `setState`
 
 Compare this...
 ```javascript
@@ -46,7 +48,7 @@ this.setStateTween({a: 1});
 ```
 
 
-#### Tween multiple state keys simultaneously:
+#### Tween multiple values simultaneously:
 ```javascript
 this.setStateTween({
     a: 1,
