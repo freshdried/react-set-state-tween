@@ -19,7 +19,7 @@
     "promise",
     "bluebird"
   ],
-  "author": "Sean Lee",
+  "author": "Sean Lee <freshdried@gmail.com> (http://sean.lee.mx/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/freshdried/react-set-state-tween/issues"
