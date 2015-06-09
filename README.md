@@ -49,7 +49,7 @@ this.setStateTween({
 });
 ```
 
-#### Specify the same options as `react-tween-state`:
+#### Specify options supported by `react-tween-state`:
 ```javascript
 this.setStateTween({a: 1}, {
     duration: 500,
@@ -143,10 +143,10 @@ this.setState( {a: 1}, function() {
 import React from "react"
 import Promise from "bluebird"
 import tweenState from "react-tween-state"
-import TweenStateToMixin from "react-tween-state-to"
+import SetStateTweenMixin from "react-set-state-tween"
 
 const App = React.createClass({
-    mixins: [TweenStateToMixin],
+    mixins: [SetStateTweenMixin],
     getInitialState: function() {
         return {
             A: 1,
@@ -159,17 +159,17 @@ const App = React.createClass({
         // resolve each promise sequentially...
 
         Promise.each([
-            () => this.tweenStateTo({A: 0}),
-            () => this.tweenStateTo({B: 0}),
-            () => this.tweenStateTo({C: 0}),
+            () => this.setStateTween({A: 0}),
+            () => this.setStateTween({B: 0}),
+            () => this.setStateTween({C: 0}),
         ]).then(function() {
 
         // and then in parallel!
 
             return Promise.all([
-                () => this.tweenStateTo({A: 1}),
-                () => this.tweenStateTo({B: 1}),
-                () => this.tweenStateTo({C: 1}),
+                () => this.setStateTween({A: 1}),
+                () => this.setStateTween({B: 1}),
+                () => this.setStateTween({C: 1}),
             ]);
         })
 
