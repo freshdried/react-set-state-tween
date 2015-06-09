@@ -122,14 +122,14 @@ Then you can use callbacks.
 
 ```javascript
 this.setStateTween( {a: 1}, {duration: 1000},  function() {
-    console.log(finished)
+    console.log("finished");
 });
 
 /*
 // Compare to
 
 this.setState( {a: 1}, function() {
-    console.log(finished)
+    console.log("finished");
 });
 */
 ```
