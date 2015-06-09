@@ -1,0 +1,33 @@
+{
+  "name": "react-set-state-tween",
+  "version": "0.1.0",
+  "description": "Composable wrapper API for react-tween-state, à la Promises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freshdried/react-set-state-tween.git"
+  },
+  "keywords": [
+    "react",
+    "tween",
+    "tween-state",
+    "react-tween-state",
+    "animation",
+    "promise",
+    "bluebird"
+  ],
+  "author": "Sean Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/freshdried/react-set-state-tween/issues"
+  },
+  "homepage": "https://github.com/freshdried/react-set-state-tween#readme",
+  "dependencies": {
+    "bluebird": "^2.9.27",
+    "object-assign": "^3.0.0",
+    "react-tween-state": "0.0.5"
+  }
+}
