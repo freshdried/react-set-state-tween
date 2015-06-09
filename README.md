@@ -10,18 +10,19 @@ Composable wrapper API for [react-tween-state](https://github.com/chenglou/react
 
 `this.setStateTween` returns a [bluebird](https://github.com/petkaantonov/bluebird) promise that resolves at the end of the tween.
 
+</br>
 
 #### *tries to seamlessly replaces React's* `this.setState`
 
 Compare this...
-```
+```javascript
 this.setStateTween({
     key1: value1,
     key2: value2,
 },) 
 ```
 with this...
-```
+```javascript
 this.setState({
     key1: value1,
     key2: value2,
