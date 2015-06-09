@@ -2,13 +2,14 @@
 
 Composable wrapper API for [react-tween-state](https://github.com/chenglou/react-tween-state), à la [bluebird promises](https://github.com/petkaantonov/bluebird).
 
-## Why
 
-- more composable
+#### *more composable*
+
 `this.setStateTween` returns a [bluebird](https://github.com/petkaantonov/bluebird) promise that resolves at the end of the tween.
 
 
-- tries to more seamlessly replace React's `this.setState`
+#### *tries to seamlessly replace React's* `this.setState`
+
 Compare this...
 ```
 this.setStateTween({
@@ -30,13 +31,13 @@ this.setState({
 
 ## Usage
 
-### Basic:
+#### Basic:
 ```javascript
 this.setStateTween({a: 1});
 ```
 
 
-### Tween multiple state keys simultaneously:
+#### Tween multiple state keys simultaneously:
 ```javascript
 this.setStateTween({
     a: 1,
@@ -44,8 +45,8 @@ this.setStateTween({
 });
 ```
 
-### Specify `react-tween-state` options:
-```
+#### Specify the same options as `react-tween-state`:
+```javascript
 this.setStateTween({a: 1}, {
     duration: 500,
     easing: tweenState.easingTypes.easeInOutQuad
@@ -54,7 +55,7 @@ this.setStateTween({a: 1}, {
 `setStateTween` will ignore `onEnd` and `endValue` options.
 
 
-### Chain animations (and nonanimations!):
+#### Chain animations (and nonanimations!):
 ```javascript
 this.setStateTween({
     a: 1,
@@ -70,18 +71,18 @@ this.setStateTween({
 });
 ```
 
-### Resolves immediately if tween is degenerate:
+#### Note: Promise will resolve immediately if tween is degenerate:
 
 ```javascript
 // this expression will resolve in only 500 ms...
 
 this.setStateTween( {a: 1}, {duration: 500} )
-    .setStateTween( {a: 1}, {duration: 1000} );
+    then(() => setStateTween( {a: 1}, {duration: 1000} ));
 
 //...because there's no effect tweening from 1 to 1
 ```
 
-### Don't just chain animations, orchestrate them!:
+#### Don't just chain animations, orchestrate them!:
 Check out the [bluebird API](https://github.com/petkaantonov/bluebird/blob/master/API.md) for more Promise sugar.
 ```javascript
 
@@ -171,15 +172,15 @@ const App = React.createClass({
     },
     render: function() {
         let styleA = { opacity: this.getTweeningValue("A") };
-        let styleB= { opacity: this.getTweeningValue("B") };
-        let styleC= { opacity: this.getTweeningValue("C") };
+        let styleB = { opacity: this.getTweeningValue("B") };
+        let styleC = { opacity: this.getTweeningValue("C") };
         return (
             <div>
                 <div style={styleA} /> A </div>
                 <div style={styleB} /> B </div>
                 <div style={styleC} /> C </div>
 
-                <div onClick={this.onClick}> Click me! </click>
+                <div onClick={this.onClick}> Click me! </div>
             </div>
         )
     }
