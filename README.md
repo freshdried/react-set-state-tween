@@ -18,14 +18,14 @@ Compare this...
 ```javascript
 this.setStateTween({
     key1: value1,
-    key2: value2,
-},) 
+    key2: value2
+});
 ```
 with this...
 ```javascript
 this.setState({
     key1: value1,
-    key2: value2,
+    key2: value2
 });
 ```
 
