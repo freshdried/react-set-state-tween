@@ -21,7 +21,6 @@ module.exports = {
 
         var _tweenStates = function(callback) {
             return Promise.all(Object.keys(stateObj).map(function(stateKey) {
-                console.log(stateKey);
                 var stateValue = stateObj[stateKey];
 
                 // Short-circuit if not tweenable (aka not number)
@@ -32,7 +31,7 @@ module.exports = {
 
 
                 var tweenState = Promise.promisify(function(cb) {
-                    console.log("tweening " + stateKey + " from " + this.getTweeningValue(stateKey) + " to " + stateValue);
+                    // console.log("tweening " + stateKey + " from " + this.getTweeningValue(stateKey) + " to " + stateValue);
 
                     var opts = ObjectAssign({}, options);
                     opts.onEnd = cb;
