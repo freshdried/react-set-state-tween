@@ -45,7 +45,7 @@ module.exports = {
             }.bind(this))).nodeify(callback);
         }.bind(this);
 
-        if (callback) 
+        if (optionalCallback) 
             return _tweenStates(optionalCallback); 
         else return _tweenStates();
     }
